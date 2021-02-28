@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img{
+    width: 30vw;
+    height: 80vh;
+}
+
+.container{
+    width: 30vw;
+    height: 80vh;
+    position: relative;
+}
+
+.img-container-before,.img-container-after{
+    position: absolute;
+    height: 80vh;
+    width: 30vw;
+}
+
+.img-container-before{
+    width: 15vw;
+    overflow: hidden;
+}
+
+.slider{
+    width: 0.5rem;
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,0%);
+    pointer-events: none;
+}
+
+
+@media(max-width:780px){
+    .container{
+        width: 80vw;
+    }
+    img{
+        width: 80vw;
+    }
+    .img-container-before,.img-container-after{
+        width: 80vw;
+    }
+    .img-container-before{
+        width: 40vw;
+        overflow: hidden;
+    }
+}
